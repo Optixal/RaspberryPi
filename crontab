@@ -1,0 +1,2 @@
+@daily /home/server/Documents/cron-jobs/backup-FYP-repo.sh >/dev/null 2>&1
+@daily /home/server/Documents/cron-jobs/clean-backups.sh >/dev/null 2>&1
