@@ -1,0 +1,2 @@
+# sudo crontab -e
+@weekly /home/optixal/Documents/github/RaspberryPi/cron/update-upgrade.sh >/dev/null 2>&1

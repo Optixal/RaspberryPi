@@ -1,0 +1,2 @@
+@daily /home/optixal/Documents/github/RaspberryPi/cron/update-upgrade.sh >/dev/null 2>&1
+@daily /home/server/Documents/cron-jobs/backup-FYP-repo.sh >/dev/null 2>&1

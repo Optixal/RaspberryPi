@@ -1,0 +1,11 @@
+passwd # Change password of pi
+raspi-config # Enable SSH and VNC
+sudo apt-get update -y && sudo apt-get upgrade -y && sudo apt-get dist-upgrade -y && sudo apt-get install vim # Update upgrade everything, and install vim
+vim /boot/config.txt # To fix screen overscan (black border), uncomment "disable_overscan=1"
+adduser [personal acc] # Add new user
+sudo visudo # Add personal acc to sudoers
+# Open VNC "Options" (from the panel), in "Security" change "Encryption" to "Always on". In "Users & Permissions", add personal account with full admin rights, remove everything else.
+# Logout of raspberry pi and login to personal account
+sudo vim /etc/passwd # Chg login shells of root and pi to /usr/sbin/nologin
+ssh-copy-id [user]@[host] # Do this from another computer hosting the public key, transfer it over to raspberry pi
+sudo vim /etc/ssh/sshd_config # "PasswordAuthentication no", "AllowUsers [personal account], "PermitRootLogin no"
